@@ -2,8 +2,9 @@
 import { useState } from "react";
 import "./styles/Sidebar.css";
 import logo from "../../assets/icon-app.png";
-import { FaCalendarAlt, FaCog, FaUser, FaSchool } from "react-icons/fa";
+import { FaHome, FaCalendarAlt, FaCog, FaUser, FaSchool } from "react-icons/fa";
 import { FaMessage } from "react-icons/fa6";
+import { Link } from "react-router-dom";
 
 import { useAuth0 } from "@auth0/auth0-react";
 
@@ -34,11 +35,42 @@ export default function Sidebar() {
 
       <nav className="sidebar-menu">
         <ul>
-          <li><FaUser /><span>User</span></li>
-          <li><FaSchool /><span>Courses</span></li>
-          <li><FaCalendarAlt /><span>Schedule</span></li>
-          <li><FaMessage /><span>Notification</span></li>
-          <li><FaCog /><span>Settings</span></li>
+          <li>
+            <Link to="/">
+              <FaHome />
+              <span>Home</span>
+            </Link>
+          </li>
+          <li>
+            <Link to="/usuarios">
+              <FaUser />
+              <span>User</span>
+            </Link>
+          </li>
+          <li>
+            <Link to="/cursos">
+              <FaSchool />
+              <span>Courses</span>
+            </Link>
+          </li>
+          <li>
+            <Link to="/schedule">
+              <FaCalendarAlt />
+              <span>Schedule</span>
+            </Link>
+          </li>
+          <li>
+            <Link to="/notifications">
+              <FaMessage />
+              <span>Notification</span>
+            </Link>
+          </li>
+          <li>
+            <Link to="/settings">
+              <FaCog />
+              <span>Settings</span>
+            </Link>
+          </li>
         </ul>
       </nav>
 

@@ -1,33 +1,83 @@
 import "./styles/Cursos.css";
 
+type Curso = {
+  id: number;
+  titulo: string;
+  descripcion: string;
+  duracion: string;
+};
+
+const cursos: Curso[] = [
+  {
+    id: 1,
+    titulo: 'Inglés Experto',
+    descripcion: 'Descripción del curso',
+    duracion: '10 horas',
+  },
+  {
+    id: 2,
+    titulo: 'Portugués Intermedio',
+    descripcion: 'Descripción del curso',
+    duracion: '10 horas',
+  },
+  {
+    id: 3,
+    titulo: 'Alemán Básico',
+    descripcion: 'Descripción del curso',
+    duracion: '10 horas',
+  },
+  {
+    id: 4,
+    titulo: 'Francés Avanzado',
+    descripcion: 'Descripción del curso',
+    duracion: '10 horas',
+  },
+  {
+    id: 5,
+    titulo: 'Italiano Intermedio',
+    descripcion: 'Descripción del curso',
+    duracion: '10 horas',
+  },
+  {
+    id: 6,
+    titulo: 'Ruso Avanzado',
+    descripcion: 'Descripción del curso',
+    duracion: '10 horas',
+  },
+  {
+    id: 4,
+    titulo: 'Coreano Básico',
+    descripcion: 'Descripción del curso',
+    duracion: '10 horas',
+  },
+  {
+    id: 5,
+    titulo: 'Japonés Básico',
+    descripcion: 'Descripción del curso',
+    duracion: '10 horas',
+  },
+  {
+    id: 6,
+    titulo: 'Mandarín Básico',
+    descripcion: 'Descripción del curso',
+    duracion: '10 horas',
+  }
+];
+
 export default function Cursos() {
-
-  const cursos = [
-    { id: 1, nombre: "Inglés Básico", progreso: 70 },
-    { id: 2, nombre: "Inglés Intermedio", progreso: 45 },
-    { id: 3, nombre: "Inglés Avanzado", progreso: 20 },
-    { id: 3, nombre: "Inglés Avanzado", progreso: 20 },
-  ];
-
   return (
-    <div className="cursos-container">
-      <h2 className="cursos-title">Mis Cursos</h2>
-      <p className="cursos-subtitle">Revisa tu progreso en cada nivel</p>
-
-      <div className="cursos-list">
-        {cursos.map((curso) => (
-          <div key={curso.id} className="curso-card">
-            <h3 className="curso-nombre">{curso.nombre}</h3>
-
-            <div className="progress-bar">
-              <div
-                className="progress-fill"
-                style={{ width: `${curso.progreso}%` }}
-              ></div>
+    <div>
+      <h2 className="cursos-progreso-title">Cursos Disponibles</h2>
+      <div className="cursos-container">
+        <div className="cursos-container">
+          {cursos.map((curso) => (
+            <div key={curso.id} className="curso-card">
+              <h2>{curso.titulo}</h2>
+              <p>{curso.descripcion}</p>
+              <p><strong>Duracion:</strong> {curso.duracion}</p>
             </div>
-            <p className="curso-progreso">{curso.progreso}% completado</p>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </div>
   );

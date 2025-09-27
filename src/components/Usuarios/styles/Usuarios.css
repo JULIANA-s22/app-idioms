@@ -1,0 +1,117 @@
+/* Usuarios.css */
+
+.usuarios-container {
+    background: #111236;
+    padding: 2rem;
+    border-radius: 20px;
+    box-shadow: 0 8px 24px rgba(40, 40, 80, 0.2);
+    color: #fff;
+    max-width: 600px;
+    margin: 2rem auto;
+    margin-top: 5%;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+.usuarios-title {
+    font-size: 2.2rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+    letter-spacing: 2px;
+    text-align: center;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+
+.usuarios-subtitle {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.usuarios-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.usuarios-item {
+    background: rgba(255,255,255,0.12);
+    margin-bottom: 1rem;
+    padding: 1rem 1.5rem;
+    border-radius: 12px;
+    transition: background 0.3s, transform 0.3s;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.usuarios-item:hover {
+    background: rgba(255,255,255,0.22);
+    transform: scale(1.03);
+    cursor: pointer;
+}
+
+.usuarios-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #fff;
+    object-fit: cover;
+    border: 2px solid #2575fc;
+}
+
+.usuarios-modificar-btn {
+    margin: 2rem auto 0;
+    padding: 0.8rem 2rem;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #fff;
+    background: #1da12a;
+    text-decoration: none;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.usuarios-modificar-btn:hover {
+    background: #1d7826;
+    transform: scale(1.05);
+}
+
+.usuarios-modificar-btn:active {
+    background: #1a4fb8;
+    transform: scale(1);
+}
+
+.usuarios-botones {
+    display: flex;
+    justify-content: center;
+    gap: 0;
+}
+
+.usuarios-ver-progreso-btn {
+    margin: 2rem auto 0;
+    padding: 0.8rem 2rem;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #fff;
+    background: #f0b40e;
+    text-decoration: none;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.usuarios-ver-progreso-btn:hover {
+    background: #a17b12;
+    transform: scale(1.05);
+}
+
+.usuarios-ver-progreso-btn:active {
+    background: #1a4fb8;
+    transform: scale(1);
+}
